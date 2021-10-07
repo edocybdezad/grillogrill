@@ -1,0 +1,23 @@
+{% extends "homepage/manage.html" %}
+
+
+{% block body %}
+<div class="container-fluid m-0 p-0">
+    <h3 class="mt-2">Manage</h3>
+    <div class="container-fluid">
+        <h6 class="">Modificar Items del Menu</h6>
+        <p class="">* Click sobre el nombre para actualizar el articulo </p>
+        <div class="container-fluid m-0 p-0">
+            {% for category in categories %}
+                <p class="text-light bg-dark my-1 p-0">{{ category.name }}</p>
+                <div class="container d-flex flex-row flex-wrap justify-content-start p-0 mx-0">
+                    {% for item in category.items.all %}
+                    <a href="{% url 'item-update' item.id %}" class="btn btn-secondary btn-sm  itemlinks" role="button" aria-disabled="true">{{ item.name }}</a>
+                    {% endfor %}
+                </div>
+            {% endfor %}
+
+        </div>
+    </div>
+</div>    
+{% endblock %}

@@ -1,0 +1,68 @@
+#TINTOS
+PASO A PASO ROBLE
+Tempranillo. Goloso y elegante. Muy facil de tomar
+13.50
+MADAME BOBALÚ
+Bobal de corte moderno. Se nota su paso por madera
+14.90
+LES ALCUSSES
+Cabernet, Monastrell, Syrah, Tempranillo, Merlot. Equilibrado, sabroso, frutal, fino y facil de beber.
+17.00
+AZPILICUETA Crianza
+Tempranillo, Graciano, Mazuelo. Tipicidad de Rioja, bien elaborado, fresco y afrutado
+17.00
+MARQUÉS DE MURRIETA Reserva
+Tempranillo, Graciano, Mazuela, Garnacha. Elegante y equilibrado. Afinado año y medio en barrica
+26.00
+DOBLE R COSECHA
+Tempranillo. Vino joven de la zona. De color intenso y muy afrutado
+13.90
+PRADOREY Origen
+Tinta Fina, Cavernet Sauvignon, Merlot. Amable, complejo y sabroso.
+16.90
+CARMELO RODERO Crianza
+Tinta Fina, Cavernet Sauvignon. Con cuerpo, redondeado en barrica nueva. Un vino goloso y elegante
+26.00
+SAN ROMÁN
+Tinto de Toro. Potente y con mucho cuerpo, ideal para acompañar carnes rojas
+30.00
+WRONGO DONGO
+Monastrell. Intenso, afrutado y muy goloso
+15.50
+#BLANCOS
+PASO A PASO
+Verdejo, Mocabeo. Fresco y divertido. Perfecto para tomar con tapas
+14.00
+JAVIER SANZ VITICULTOR
+Verdejo. Muy intenso en nariz y largo en boca
+16.50
+PATO MAREADO
+Albariño. Floral con la frescura original de la variedad y la zona
+19.00
+BAIGORRI F. en Barrica Crianza
+Viura, Malvasia. Estructurado y potente. Puede acompañar carnes de todo tipo
+22.00
+MADAM MERSEGUERA
+Aromático con graduación moderada de gran finura y equilibrada acidez
+13.00
+#ROSADO
+EXCELLENS ROSÉ
+Tempranillo, Garnacha. De color pétalo de rosa, es muy fresco y delicado
+16.00
+#CAVA
+DOMINIO DE LA VEGA Authentique
+Brut Nature Reserva. Macabeo, Xarel-lo. Su crianza en botella le da una burbuja muy fina y elegante. Ideal como primera copa
+17.00
+#VINOS POR COPA
+PASO A PASO ROBLE
+Tempranillo. Goloso y elegante. Muy facil de tomar
+3.00
+DOBLE R COSECHA
+Tempranillo. Vino joven de la zona. De color intenso y muy afrutado
+3.00
+MADAM MERSEGUERA
+Aromático con graduación moderada de gran finura y equilibrada acidez
+3.00
+PASO A PASO MERSEGUERA
+Verdejo, Mocabeo. Fresco y divertido. Perfecto para tomar con tapas
+3.00

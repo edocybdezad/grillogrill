@@ -1,0 +1,66 @@
+category,name,description,price
+TAPAS,NUESTRAS PATATAS,con nuestra salsa picante atrevida,5.80
+TAPAS,CROQUETA DE LA SEMANA,Déjate sorprender por nuestra sugerencia,9.20
+TAPAS,MORCILLA DE BURGOS A LA BRASA,acompañada con nuestra brunoise de manzana verde a la sidra,8.40
+TAPAS,NUESTRAS COSTILLAS ASIATICAS,cocinadas 28 hs a baja temperatura y caramelizadas a la brasa,13.00
+TAPAS,CECINA DE VACA PREMIUM,cecina de vaca Frisona (100gr),12.00
+TAPAS,TATAKI DE ATUN ROJO A LA BRASA,con escalivada ligeramente ahumada y pesto de albahaca,11.90
+TAPAS,COCA DE BERENJENA A LA BRASA,"con berenjena escabechada, queso feta y olivas marroquíes",7.90
+TAPAS,"COCA DE ""PORCHETA""",panceta Duroc cocinada al estilo Romano,10.90
+TAPAS,MOLLEJITAS DE TERNERA,tiernas y crujientes y limón braseado,11.50
+TAPAS,ENSALADA MEDITERRANEA,"espinaca baby, tomate confitado, cebolla morada, caballa y aguacate",11.90
+TAPAS,PULPO A LA BRASA,pata de 180gr cocinada a baja temperatura. ¡¡UNA DELICIA!!,17.00
+TAPAS,PAN CASERO ,Racion,1.90
+CARNES A LA BRASA,"ENTRECOT DE TERNERA LECHAL DE ZAMORA D.O. ""ALISTE""",,19.90
+CARNES A LA BRASA,ENTRECOT PREMIUM SELECCIONADO,,21.00
+CARNES A LA BRASA,ENTRECOT GALLEGO MADURADO (45/60D),,21.00
+CARNES A LA BRASA,TAGLIATA LECHAL DE ZAMORA CON RUCULA Y PARMESANO,,16.90
+CARNES A LA BRASA,PRESA BLACK ANGUS NEBRASKA,,21.00
+CON HUESO,"CHULETON LECHAL DE ZAMORA D.O. ""ALISTE""",,48.00/Kg
+CON HUESO,CHULETON MADURADO DE GALICIA,frisona madurada entre 45 y 70 días,60.00/Kg
+CON HUESO,"TOMAHAWK DE LECHAL DE ZAMORA D.O. ""ALISTE""",sujeto a disponibilidad,48.00/Kg
+CON HUESO,TOMAHAWK MADURADO DE GALICIA,sujeto a disponibilidad,60.00/Kg
+CON HUESO,T-BONE SIMMENTAL HOLANDESA,sujeto a disponibilidad,60.00/Kg
+POSTRES,CREME BRULEE,perfumado al cafe y naranja,4.80
+POSTRES,NEW YORK CHEESECAKE,la autentica tarta de queso americana con salsa de frutos rojos,5.50
+POSTRES,CANNOLO DE RICOTTA DE OVEJA,acompañada con helado de pannacotta y licor de pistaccio siciliano,6.00
+POSTRES,TIRAMISU,nuestro tiramisu con tierra de chocolate,5.50
+BEBIDAS,AGUA 1/2 L,,2.10
+BEBIDAS,AGUA CON GAS SAN PELEGRINO,,3.00
+BEBIDAS,REFRESCOS,,2.50
+BEBIDAS,CAÑA MAHOU,,1.90
+BEBIDAS,DOBLE MAHOU,,2.40
+BEBIDAS,TERCIO 5 ESTRELLAS,,2.40
+BEBIDAS,MAHOU MAESTRA,,3.00
+BEBIDAS,TERCIO o/o,,2.50
+BEBIDAS,MAHOU IPA,,3.50
+BEBIDAS,JARRA DE SANGRIA,,11.5
+BEBIDAS,JARRA AGUA DE VALENCIA,,12.5
+BEBIDAS,GIN&TONIC CLASSIC,,6.5
+BEBIDAS,GIN&TONIC PREMIUM,,8.00
+BEBIDAS,APEROL SPRITZ,,6.00
+BEBIDAS,CAMPARI SODA,,6.00
+BEBIDAS,MARTINI,,4.00
+BEBIDAS,COPA DE LICOR,,4.00
+BEBIDAS,CHUPITO,,2.5
+VINOS TINTO,PASO A PASO ROBLE,Tempranillo. Goloso y elegante. Muy facil de tomar,13.5
+VINOS TINTO,MADAME BOBALÚ,Bobal de corte moderno. Se nota su paso por madera,14.9
+VINOS TINTO,LES ALCUSSES,"Cabernet, Monastrell, Syrah, Tempranillo, Merlot. Equilibrado, sabroso, frutal, fino y facil de beber.",17.00
+VINOS TINTO,AZPILICUETA Crianza,"Tempranillo, Graciano, Mazuelo. Tipicidad de Rioja, bien elaborado, fresco y afrutado",17.00
+VINOS TINTO,MARQUÉS DE MURRIETA Reserva,"Tempranillo, Graciano, Mazuela, Garnacha. Elegante y equilibrado. Afinado año y medio en barrica",26.00
+VINOS TINTO,DOBLE R COSECHA,Tempranillo. Vino joven de la zona. De color intenso y muy afrutado,13.90
+VINOS TINTO,PRADOREY Origen,"Tinta Fina, Cavernet Sauvignon, Merlot. Amable, complejo y sabroso.",16.90
+VINOS TINTO,CARMELO RODERO Crianza,"Tinta Fina, Cavernet Sauvignon. Con cuerpo, redondeado en barrica nueva. Un vino goloso y elegante",26.00
+VINOS TINTO,SAN ROMÁN,"Tinto de Toro. Potente y con mucho cuerpo, ideal para acompañar carnes rojas",30.00
+VINOS TINTO,WRONGO DONGO,"Monastrell. Intenso, afrutado y muy goloso",15.50
+VINOS BLANCO,PASO A PASO,"Verdejo, Mocabeo. Fresco y divertido. Perfecto para tomar con tapas",14.00
+VINOS BLANCO,JAVIER SANZ VITICULTOR,Verdejo. Muy intenso en nariz y largo en boca,16.50
+VINOS BLANCO,PATO MAREADO,Albariño. Floral con la frescura original de la variedad y la zona,19.00
+VINOS BLANCO,BAIGORRI F. en Barrica Crianza,"Viura, Malvasia. Estructurado y potente. Puede acompañar carnes de todo tipo",22.00
+VINOS BLANCO,MADAM MERSEGUERA,Aromático con graduación moderada de gran finura y equilibrada acidez,13.00
+VINO ROSADO,EXCELLENS ROSÉ,"Tempranillo, Garnacha. De color pétalo de rosa, es muy fresco y delicado",16.00
+CAVA,DOMINIO DE LA VEGA Authentique,"Brut Nature Reserva. Macabeo, Xarel-lo. Su crianza en botella le da una burbuja muy fina y elegante. Ideal como primera copa",17.00
+VINOS POR COPA,PASO A PASO ROBLE,Tempranillo. Goloso y elegante. Muy facil de tomar,3.00
+VINOS POR COPA,DOBLE R COSECHA,Tempranillo. Vino joven de la zona. De color intenso y muy afrutado,3
+VINOS POR COPA,MADAM MERSEGUERA,Aromático con graduación moderada de gran finura y equilibrada acidez,3
+VINOS POR COPA,PASO A PASO MERSEGUERA,"Verdejo, Mocabeo. Fresco y divertido. Perfecto para tomar con tapas",3

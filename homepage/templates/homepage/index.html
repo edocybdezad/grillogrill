@@ -1,0 +1,397 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grillo Grill</title>
+    <!-- FA -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">    
+</head>
+<body>
+    <div class="layout">
+        <header class="container p-0  brand">
+            <div class="container d-flex justify-content-between mt-2">
+                <div class="text-light mt-1">
+                  <p class="m-0 p-0" id="openToday">Horario</p>
+                  <p class="m-0 p-0">Hoy {{ opentoday }}</p>
+                </div>
+                <img src="{% static 'pics/logo.jpg' %}" alt="" class="" id="brandLogo">
+            </div>
+            <nav class="mt-0 ">
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active p-2" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Home</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link p-2" id="menu-tab" data-bs-toggle="tab" data-bs-target="#menu" type="button" role="tab" aria-controls="menu" aria-selected="false">Menu</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link p-2" id="vinos-tab" data-bs-toggle="tab" data-bs-target="#vinos" type="button" role="tab" aria-controls="vinos" aria-selected="false">Vinos</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link p-2" id="booking-tab" data-bs-toggle="tab" data-bs-target="#booking" type="button" role="tab" aria-controls="booking" aria-selected="false">Booking</button>
+                    </li>
+                </ul>
+            </nav>              
+        </header> 
+        <!--content main  -->
+        <main class="container block-main">
+            <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                    
+                    <div class="container my-4">
+                        <div class="container-fluid grillo-grill">
+                            <div class="grill-word">
+                                <div class="brand-text">G</div><div class="span-text">RILL</div>
+                            </div>
+                            <div class="brand-text-sub">& Bar</div>
+                            <p class="brand-tag"> Cocina a la Brasa de Carbon Vegetal - Cocina Mediterranea - Carnes de Calidad</p>
+                        </div>
+         
+                        
+                        <div class="container d-flex justify-content-center align-items-center social-links">
+                            <div class="social"><a href="https://www.tripadvisor.co/Restaurant_Review-g187529-d17529488-Reviews-Grillo_Grill_Bar-Valencia_Province_of_Valencia_Valencian_Country.html" target="_blank"><img src="{% static 'pics/trip.jpg' %}" alt=""></a></div>
+                            <div class="social"><a href="https://www.facebook.com/grillogrillbar/" target="_blank"><i class="fab fa-facebook fa-3x"></i></a></div>
+                            <div class="social"><a href="https://www.instagram.com/grillogrillbar/?hl=es" target="_blank"><i class="fab fa-instagram fa-3x"></i></a></div>
+                            <div class="social"><a href="#"><i class="fab fa-youtube fa-3x"></i></a></div>
+                        </div>
+                    </div>   
+
+                </div>
+                <div class="tab-pane fade " id="menu" role="tabpanel" aria-labelledby="menu-tab">
+                    <div class="accordion " id="accordionExample">
+                        <div class="accordion-item ">
+                          <h6 class="accordion-header" id="headingOne">
+                            <button class="accordion-button text-light bg-dark collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                              {{ categories.0.name }}
+                            </button>
+                          </h6>
+                          <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                              {% for item in categories.0.items.all %}
+                                <div class="card" id="itemCard">
+                                    <div class="row g-0">
+                    
+                                      <div class="col-10">
+                                        <div class="card-body p-0 mb-1">
+                                          <p class="card-title m-0 text-info">{{ item.name}}</p>
+                                          {% if item.available %}
+                                            <p class="card-text">{{ item.description }}</p>
+                                          {% else %}
+                                            <p class="card-text text-danger">NO DISPONIBLE</p>
+                                          {% endif %}
+                                        </div>
+                                      </div>
+                                      <div class="col-2 text-end">
+                                        <p class="">{{ item.price}}</p>
+                                      </div>                  
+                                    </div>
+                                </div> 
+                              {%endfor %}
+                              <p class="text-mute"><small>{{ categories.0.footer|linebreaks}}</small></p>                          
+                            </div>
+                          </div>
+                        </div>
+                        <div class="accordion-item">
+                          <h6 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button text-light bg-dark collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                              {{ categories.1.name}}
+                            </button>
+                          </h6>
+                          <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                              {% for item in categories.1.items.all %}
+                                <div class="card" id="itemCard">
+                                    <div class="row g-0">
+                    
+                                      <div class="col-10">
+                                        <div class="card-body p-0 mb-1">
+                                          <p class="card-title m-0 text-info">{{ item.name}}</p>
+                                          {% if item.available %}
+                                            <p class="card-text">{{ item.description }}</p>
+                                          {% else %}
+                                            <p class="card-text text-danger">NO DISPONIBLE</p>
+                                          {% endif %}
+                                        </div>
+                                      </div>
+                                      <div class="col-2 text-end">
+                                        <p class="">{{ item.price}}</p>
+                                      </div>                  
+                                    </div>
+                                  </div> 
+                              {%endfor %}
+                              <p class="text-mute"><small>{{ categories.1.footer}}</small></p>   
+                            </div>
+                          </div>
+                        </div>
+                        <div class="accordion-item">
+                          <h6 class="accordion-header" id="headingThree">
+                            <button class="accordion-button text-light bg-dark collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                              {{ categories.2.name }}
+                            </button>
+                          </h6>
+                          <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                              {% for item in categories.2.items.all %}
+                                <div class="card" id="itemCard">
+                                    <div class="row g-0">
+                    
+                                      <div class="col-10">
+                                        <div class="card-body p-0 mb-1">
+                                          <p class="card-title m-0 text-info">{{ item.name}}</p>
+                                          {% if item.available %}
+                                            <p class="card-text">{{ item.description }}</p>
+                                          {% else %}
+                                            <p class="card-text text-danger">NO DISPONIBLE</p>
+                                          {% endif %}
+                                        </div>
+                                      </div>
+                                      <div class="col-2 text-end">
+                                        <p class="">{{ item.price}}</p>
+                                      </div>                  
+                                    </div>
+                                  </div> 
+                              {%endfor %}
+                              <p class="text-mute"><small>{{ categories.2.footer}}</small></p>   
+                            </div>                              
+                          </div>
+                        </div>
+                        <div class="accordion-item">
+                          <h6 class="accordion-header" id="headingFour">
+                            <button class="accordion-button text-light bg-dark collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                              {{ degustacion.name }}
+                            </button>
+                          </h6>
+                          <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingfour" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <div class="card" id="itemCard">
+                                    <div class="row g-0">
+                    
+                                      <div class="col-10">
+                                        <div class="card-body p-0 mb-1">
+                                          <p class="card-title m-0 text-info">Platos</p>
+                                          <p class="card-text">{{ degustacion.description|linebreaks }}</p>
+                                        </div>
+                                      </div>
+                                      <div class="col-2 text-end">
+                                        <p class=""></p>
+                                      </div>                  
+                                    </div>
+                                    <p class="text-light bg-dark text-center">{{ degustacion.price }}€ <small>por persona</small></p>  
+                                  </div> 
+                         
+                            </div>                              
+                          </div>
+                        </div>
+                        <div class="accordion-item">
+                          <h6 class="accordion-header" id="headingFive">
+                            <button class="accordion-button text-light bg-dark collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                              {{ categories.3.name }}
+                            </button>
+                          </h6>
+                          <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                              {% for item in categories.3.items.all %}
+                                <div class="card" id="itemCard">
+                                    <div class="row g-0">
+                    
+                                      <div class="col-10">
+                                        <div class="card-body p-0 mb-1">
+                                          <p class="card-title m-0 text-info">{{ item.name}}</p>
+                                          {% if item.available %}
+                                            <p class="card-text">{{ item.description }}</p>
+                                          {% else %}
+                                            <p class="card-text text-danger">NO DISPONIBLE</p>
+                                          {% endif %}
+                                        </div>
+                                      </div>
+                                      <div class="col-2 text-end">
+                                        <p class="">{{ item.price}}</p>
+                                      </div>                  
+                                    </div>
+                                  </div> 
+                              {%endfor %}
+                              <p class="text-mute"><small>{{ categories.3.footer}}</small></p>   
+                            </div>                              
+                          </div>
+                        </div>
+                        <div class="accordion-item">
+                          <h6 class="accordion-header" id="headingSix">
+                            <button class="accordion-button text-light bg-dark collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                              {{ categories.4.name }}
+                            </button>
+                          </h6>
+                          <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                              {% for item in categories.4.items.all %}
+                                <div class="card" id="itemCard">
+                                    <div class="row g-0">
+                    
+                                      <div class="col-10">
+                                        <div class="card-body p-0 mb-1">
+                                          <p class="card-title m-0 text-info">{{ item.name}}</p>
+                                          <p class="card-text">{{ item.description }}</p>
+                                        </div>
+                                      </div>
+                                      <div class="col-2 text-end">
+                                        <p class="">{{ item.price}}</p>
+                                      </div>                  
+                                    </div>
+                                  </div> 
+                              {%endfor %}
+                              <p class="text-mute"><small>{{ categories.4.footer}}</small></p>   
+                            </div>                              
+                          </div>
+                        </div>                                                                
+                    </div>                    
+                </div>
+                <div class="tab-pane fade" id="vinos" role="tabpanel" aria-labelledby="vinos-tab">
+                  <div class="accordion " id="accordionVinos">
+                    <div class="accordion-item ">
+                      <h6 class="accordion-header" id="headingOne">
+                        <button class="accordion-button text-light bg-dark collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                          {{ categories.6.name }}
+                        </button>
+                      </h6>
+                      <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionVinos">
+                        <div class="accordion-body px-1 py-1">
+                          {% for item in categories.6.items.all %}
+                            <div class="card" id="itemCard">
+                                <div class="row g-0">
+                
+                                  <div class="col-10">
+                                    <div class="card-body p-0 mb-1">
+                                      <p class="card-title m-0 text-info">{{ item.name}}</p>
+                                      <p class="card-text">{{ item.description }}</p>
+                                    </div>
+                                  </div>
+                                  <div class="col-2 text-end">
+                                    <p class="">{{ item.price}}</p>
+                                  </div>                  
+                                </div>
+                            </div> 
+                          {%endfor %}
+                          <p class="text-mute"><small>{{ categories.6.footer|linebreaks}}</small></p>                          
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h6 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button text-light bg-dark collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                          {{ categories.7.name}}
+                        </button>
+                      </h6>
+                      <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionVinos">
+                        <div class="accordion-body">
+                          {% for item in categories.7.items.all %}
+                            <div class="card" id="itemCard">
+                                <div class="row g-0">
+                
+                                  <div class="col-10">
+                                    <div class="card-body p-0 mb-1">
+                                      <p class="card-title m-0 text-info">{{ item.name}}</p>
+                                      <p class="card-text">{{ item.description }}</p>
+                                    </div>
+                                  </div>
+                                  <div class="col-2 text-end">
+                                    <p class="">{{ item.price}}</p>
+                                  </div>                  
+                                </div>
+                              </div> 
+                          {%endfor %}
+                          <p class="text-mute"><small>{{ categories.7.footer}}</small></p>   
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h6 class="accordion-header" id="headingThree">
+                        <button class="accordion-button text-light bg-dark collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                          {{ categories.8.name }}
+                        </button>
+                      </h6>
+                      <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionVinos">
+                        <div class="accordion-body">
+                          {% for item in categories.8.items.all %}
+                            <div class="card" id="itemCard">
+                                <div class="row g-0">
+                
+                                  <div class="col-10">
+                                    <div class="card-body p-0 mb-1">
+                                      <p class="card-title m-0 text-info">{{ item.name}}</p>
+                                      <p class="card-text">{{ item.description }}</p>
+                                    </div>
+                                  </div>
+                                  <div class="col-2 text-end">
+                                    <p class="">{{ item.price}}</p>
+                                  </div>                  
+                                </div>
+                              </div> 
+                          {%endfor %}
+                          <p class="text-mute"><small>{{ categories.8.footer}}</small></p>   
+                        </div>                              
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h6 class="accordion-header" id="headingFive">
+                        <button class="accordion-button text-light bg-dark collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                          {{ categories.9.name }}
+                        </button>
+                      </h6>
+                      <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                          {% for item in categories.9.items.all %}
+                            <div class="card" id="itemCard">
+                                <div class="row g-0">
+                
+                                  <div class="col-10">
+                                    <div class="card-body p-0 mb-1">
+                                      <p class="card-title m-0 text-info">{{ item.name}}</p>
+                                      <p class="card-text">{{ item.description }}</p>
+                                    </div>
+                                  </div>
+                                  <div class="col-2 text-end">
+                                    <p class="">{{ item.price}}</p>
+                                  </div>                  
+                                </div>
+                              </div> 
+                          {%endfor %}
+                          <p class="text-mute"><small>{{ categories.9.footer}}</small></p>   
+                        </div>                              
+                      </div>
+                    </div>                                                          
+                  </div>                    
+                </div>
+                <div class="tab-pane fade" id="booking" role="tabpanel" aria-labelledby="booking-tab">
+                       <!-- booking form -->
+                      <div class="container text-light mb-1">
+                        <p class="my-1 text-capitalize"><i class="bi bi-exclamation-triangle"></i> Verifique el horario al final de la pagina</p>
+                        <div class="card" id="bForm">
+                          <div class="card-body">
+                            <!-- <h5 class="card-title">Create New Listing</h5> -->
+                            <form action="" method="post" id="rForm">
+                              {% csrf_token %}
+                              {{ form.as_p }}
+                              <button class="btn btn-info btn-sm" type="submit">Enviar<i class="bi bi-arrow-up-right"></i></button>
+                            </form>                      
+                          </div>
+                        </div>
+                      <!-- Schedule -->
+                      <div class="py-1 px-1 mt-1 bg-dark schedule">
+                        {% for key,value in schedule.items %}
+                          <p class="p-1 m-0">{{ value }}</p>
+                        {% endfor %}
+                      </div>                                                
+                      </div>
+                </div>
+              </div>            
+        </main>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>        
+</body>
+</html>

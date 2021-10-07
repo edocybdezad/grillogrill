@@ -1,0 +1,1 @@
+{"Monday": "Lunes : 01:00PM - 04:00PM / 08:00 PM - 12:00 AM", "Tuesday": "Martes : Cerrado", "Wednesday": "Miercoles : Cerrado", "Thursday": "Jueves : 01:00PM - 04:00PM / 08:00 PM - 12:00 AM", "Friday": "Viernes : 01:00PM - 04:00PM / 08:00 PM - 12:00 AM", "Saturday": "Sabado : 01:00PM - 04:00PM / 08:00 PM - 12:00 AM", "Sunday": "Domingo : 01:00PM - 04:00PM / 08:00 PM - 12:00 AM"}

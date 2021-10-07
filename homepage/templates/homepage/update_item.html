@@ -1,0 +1,24 @@
+{% extends "homepage/manage.html" %}
+
+
+{% block body %}
+  <div class="container-fluid p-0 m-0">
+      <h3 class="mt-2 ml-2">Manage</h3>
+      <div class="container-fluid p-0 m-0">
+        <h6 class="ml-2">Modificar Items del Menu</h6>
+        <p class="ml-2">-Desactivar Items, Cambiar Precio, nombre description</p>
+        <div class="container-fluid ">
+          <div class="card" id="bForm">
+            <div class="card-body">
+              <!-- <h5 class="card-title">Create New Listing</h5> -->
+              <form action="" method="post" id="rForm">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button class="btn btn-info btn-sm" type="submit">Enviar<i class="bi bi-arrow-up-right"></i></button>
+              </form>                      
+            </div>
+          </div>  
+        </div>
+      </div>
+  </div>    
+{% endblock %}
