@@ -11,7 +11,7 @@ body {
     height: 100%;
     min-height: 100vh;
     /* min-height: 100vh; */
-    background: url("/static/pics/ribs.jpg") no-repeat center center fixed;
+    background: url("http://imgbox.com/agQ6jSlS") no-repeat center center fixed;
     background-size: cover;
     font-size: 13px;
     font-family: calibri, serif;
